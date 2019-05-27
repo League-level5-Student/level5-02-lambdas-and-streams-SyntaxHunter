@@ -42,14 +42,8 @@ public class LambdaMethods {
 		}, "periods");
 		
 		//5. Call the printCustonMessage method using a lambda so that the String prints without any vowels.
-		printCustomMessage(s -> {
-			StringBuilder str = new StringBuilder(s);
-			char[] vowels = new char[]{'a', 'e', 'i', 'o', 'u'};
-			// How can I use a stream to complete this?
-			// Will the stream apply to vowels or str?
-		}, "vowels");
+		printCustomMessage(s -> System.out.println(s.replaceAll("[AEIOUaeiou]", "")), "vowels");
 		
-	
 	}
 	
 	public static void printCustomMessage(SpecialPrinter sp, String value) {
